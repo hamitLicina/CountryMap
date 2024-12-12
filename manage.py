@@ -1,6 +1,10 @@
 from geopy.geocoders import Nominatim
 import plotly.express as px
 import pandas as pd
+import plotly.graph_objects as go
+import plotly
+print("Welcome to the Location Map Generator!")
+print(plotly.__version__)
 
 # Step 1: Initialize geolocator
 geolocator = Nominatim(user_agent="geoapi")
@@ -15,6 +19,7 @@ while True:
     if location_input.lower() == 'done':
         break
     locations.append(location_input)
+print("You entered:", locations)
 
 # Step 3: Geocode each location
 location_data = []
